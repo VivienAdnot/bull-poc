@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:bull": "node src/workers/server.js"
+    "start:bull": "node src/workers/bull-server.js",
+    "start:consumers": "node src/workers/supervisor/start.dev.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/VivienAdnot/bull-poc#readme",
   "dependencies": {
     "bluebird": "^3.5.4",
+    "boom": "^7.3.0",
     "bull": "^3.7.0",
     "lodash": "^4.17.11"
   }

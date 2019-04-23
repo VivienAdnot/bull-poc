@@ -41,8 +41,8 @@ function createWorkerService(configs, options) {
     });
 
     // pourquoi il y a besoin de ces 3 manières de procéder ?
-    _.set(workerService, conf.path.split('/'), worker);
-    _.set(workerService, worker.name, worker.name);
+    //_.set(workerService, conf.path.split('/'), worker);
+    //_.set(workerService, worker.name, worker.name);
     _.set(workerService, ['workers', worker.name], worker);
   });
 
