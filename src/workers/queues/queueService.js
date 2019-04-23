@@ -5,10 +5,6 @@ function QueueService() {
 }
 
 QueueService.prototype = {
-  /**
-   * Returns or creates a bull queue by name
-   * @param {string} name
-   */
   getOrCreate(name) {
     if (!this.queues[name]) {
       this.queues[name] = new Bull(name);

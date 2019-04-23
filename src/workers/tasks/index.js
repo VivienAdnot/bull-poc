@@ -1,11 +1,8 @@
-const { createWorkerService } = require('../queues/workerService.js');
+const { createWorkerService } = require('../queues/workerService');
 
 const tasks = [{
     name: 'FAKE_WAITER',
     path: 'fakeWaiter'
 }];
 
-// locate root folder of the registered jobs => allows for flexible folder architecture
-module.exports = createWorkerService(tasks, {
-    dir: __dirname
-});
+module.exports = createWorkerService(tasks);

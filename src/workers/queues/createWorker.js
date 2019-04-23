@@ -1,18 +1,12 @@
 const queueService = require('./queueService');
 
-function createBullWorker({ name, queueName, concurrency, workerPath }) {
+function createBullWorker({ name, queueName }) {
   return {
     name,
     queueName,
-
     enqueue(jobData) {
-      const data = {
-        ...jobData,
-        queueName,
-        workerPath
-      };
-
       const queue = queueService.getOrCreate(queueName);
+      const data = { ...jobData, queueName };
       return queue.add(data);
     }
   };
