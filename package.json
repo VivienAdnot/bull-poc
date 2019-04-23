@@ -1,0 +1,24 @@
+{
+  "name": "bull-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:bull": "node src/workers/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivienAdnot/bull-poc.git"
+  },
+  "author": "Vivien Adnot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivienAdnot/bull-poc/issues"
+  },
+  "homepage": "https://github.com/VivienAdnot/bull-poc#readme",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "bull": "^3.7.0",
+    "lodash": "^4.17.11"
+  }
+}
